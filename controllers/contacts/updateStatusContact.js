@@ -1,11 +1,12 @@
 const { Contact } = require("../../models");
 
-const updateContactById = async (req, res, next) => {
+const updateStatusContact = async (req, res, next) => {
   try {
     const { contactId } = req.params;
+    const { favorite } = req.body;
     const updatedContact = await Contact.findByIdAndUpdate(
       contactId,
-      req.body,
+      { favorite },
       { new: true }
     );
     res.json({
@@ -18,4 +19,4 @@ const updateContactById = async (req, res, next) => {
   }
 };
 
-module.exports = updateContactById;
+module.exports = updateStatusContact;
