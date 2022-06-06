@@ -4,6 +4,7 @@ const cors = require("cors");
 
 // const contactsOperations = require("./models/contacts");
 // contactsOperations.listContacts();
+console.log("Hello world");
 
 const contactsRouter = require("./routes/api/contacts");
 
